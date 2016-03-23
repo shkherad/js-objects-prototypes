@@ -14,23 +14,23 @@
 
 In the previous lesson, we saw how to use constructors to de-duplicate effort
 in creating new objects that share attributes. We learned that we should never
-define a method inside a constructor function. So how do we get behavior in our
-custom objects?
+define a method inside a constructor function. So how should we get behavior in
+ our custom objects?
 
-Remember `batman`?
+Remember `wonderWoman`?
 
 ```js
-let batman = {
-  name: 'Bruce Wayne',
-  alias: 'The Bat-man',
+let wonderWoman = {
+  name: 'Diana Prince',
+  alias: 'Wonder Woman',
 
   power: function() {
-    return 'Super wealthy and super pissed off';
+    return 'Deflects bullets with bracelets';
   }
 }
 ```
 
-We made a nice `Hero` constructor to take care of the attributes.
+We made a nice `Hero` constructor to take care of the attributes .
 
 ```js
 const Hero = function(name, alias) {
@@ -43,9 +43,9 @@ Next:
 
 1.  Create a method to say the hero's name and alias. Attach it to the
     prototype.
-1.  Create `batman` and `superman`. Call the method just attached.
-1.  Explain that power is a singleton method, and should be attached directly
-    to the object. It's really just data *IN DISGUISE*!
+1.  Create `batman` and `wonderWoman`. Call the method just attached.
+1.  Observe that this method isn't part of objects created using the constructor
+ function.
 
 ## Lab: Add Methods to Prototypes
 
