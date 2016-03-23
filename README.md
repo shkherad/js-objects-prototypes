@@ -10,6 +10,14 @@
 
 -   Define methods on custom objects by attaching them to the prototype
 
+## Preparation
+
+1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+    this repository.
+1.  Change to the new directory.
+1.  Install dependencies.
+1.  Create and checkout a new branch, `training`
+
 ## Prototypes
 
 In the previous lesson, we saw how to use constructors to de-duplicate effort
@@ -24,7 +32,7 @@ let wonderWoman = {
   name: 'Diana Prince',
   alias: 'Wonder Woman',
 
-  power: function() {
+  usePower: function() {
     return 'Deflects bullets with bracelets';
   }
 }
@@ -33,14 +41,16 @@ let wonderWoman = {
 We made a nice `Hero` constructor to take care of the attributes .
 
 ```js
-const Hero = function(name, alias) {
+const Hero = function(name, alias, power) {
   this.name = name;
   this.alias = alias;
+  this.power = power;
 };
 ```
 
-Next:
+## Code along:  add methods to prototypes
 
+1.  Create `usePower` and attach it to the constructor function's prototype.
 1.  Create a method to say the hero's name and alias. Attach it to the
     prototype.
 1.  Create `batman` and `wonderWoman`. Call the method just attached.
